@@ -24,7 +24,7 @@
     .download {
       display: flex;
       justify-content: center;
-      margin-top: -40px;
+      margin-top: -40px; /* ridicat spre imagine */
       padding-bottom: 10px;
     }
     .download a img {
@@ -78,9 +78,16 @@
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO cu imagine diferită pentru mobil și desktop -->
   <div class="hero">
-    <img src="main.jpg" alt="MuscleNerd by NerdForm Labs LLC">
+    <picture>
+      <!-- Imagine pentru mobil -->
+      <source media="(max-width: 600px)" srcset="main-mobile.jpg" type="image/jpeg">
+      <!-- Imagine pentru desktop -->
+      <source media="(min-width: 601px)" srcset="main.jpg" type="image/jpeg">
+      <!-- Fallback -->
+      <img src="main.jpg" alt="MuscleNerd by NerdForm Labs LLC">
+    </picture>
   </div>
 
   <!-- Android Download -->

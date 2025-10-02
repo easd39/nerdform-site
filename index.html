@@ -13,32 +13,36 @@
       color: #111;
     }
 
-    /* Imaginea principală (desktop + mobil) */
+    /* Container pentru imagine + buton */
+    .hero {
+      position: relative;
+      width: 100%;
+    }
     .hero img {
       display: block;
       width: 100%;
       height: auto;
     }
 
-    /* Buton Google Play */
+    /* Buton Google Play suprapus */
     .download {
-      display: flex;
-      justify-content: center;
-      margin-top: -40px;
-      padding-bottom: 20px;
+      position: absolute;
+      bottom: 20px; /* distanță față de marginea de jos a imaginii */
+      left: 50%;
+      transform: translateX(-50%);
     }
     .download a img {
       height: 70px;
       display: block;
     }
 
-    /* Linkuri minimaliste */
+    /* Linkuri minimaliste în footer */
     .links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-      margin-top: 10px;
+      margin-top: 20px;
       font-size: 15px;
     }
     .links a {
@@ -55,19 +59,15 @@
       color: #666;
       font-size: 14px;
       padding: 20px 10px 30px;
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
-    /* Responsiv pentru tabletă */
     @media (max-width: 768px) {
-      .download { margin-top: -25px; }
       .download a img { height: 60px; }
       .links { font-size: 14px; gap: 16px; }
     }
 
-    /* Responsiv pentru mobil */
     @media (max-width: 480px) {
-      .download { margin-top: -15px; }
       .download a img { height: 50px; }
       .links { font-size: 13px; gap: 12px; }
     }
@@ -75,35 +75,30 @@
 </head>
 <body>
 
-  <!-- HERO (desktop + mobil) -->
+  <!-- HERO + Android Download suprapus -->
   <div class="hero">
     <picture>
-      <!-- Mobil (<= 900px) -->
       <source media="(max-width: 900px)" srcset="main-mobile.jpg?v=2">
-      <!-- Desktop (> 900px) -->
       <source media="(min-width: 901px)" srcset="main.jpg?v=2">
-      <!-- Fallback -->
       <img src="main.jpg?v=2" alt="MuscleNerd by NerdForm Labs LLC">
     </picture>
+
+    <div class="download">
+      <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank" rel="noopener">
+        <img
+          src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+          alt="Get it on Google Play">
+      </a>
+    </div>
   </div>
 
-  <!-- Android Download -->
-  <div class="download">
-    <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank" rel="noopener">
-      <img
-        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-        alt="Get it on Google Play">
-    </a>
-  </div>
-
-  <!-- Linkuri simple -->
+  <!-- Linkuri în footer -->
   <div class="links">
     <a href="support.html">Support</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
   </div>
 
-  <!-- Footer -->
   <footer>
     © 2025 NerdForm Labs LLC
   </footer>

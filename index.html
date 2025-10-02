@@ -1,101 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MuscleNerd - by Nerdform Labs</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      height: 100%;
+    /* Reset & base */
+    html, body { margin:0; padding:0; font-family: Arial, sans-serif; background:#fff; }
+
+    /* 1) Hero = DOAR imaginea ta */
+    .hero img {
+      display:block;
+      width:100%;
+      height:auto;   /* păstrează proporțiile */
     }
 
-    /* Hero section */
-    .hero {
-      background: url("main.jpg") no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
+    /* 2) Secțiunea cu butoanele de download, imediat sub imagine */
+    .download {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:18px;
+      padding:28px 16px 18px; /* spațiu față de imagine */
+    }
+    .download a img {
+      height:64px;           /* mărime confortabilă desktop */
+      display:block;
     }
 
-    /* Dark overlay for better contrast */
-    .overlay {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 10px;
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      .download { gap:12px; padding:20px 12px 14px; }
+      .download a img { height:52px; }  /* puțin mai mic pe telefon */
     }
 
-    .overlay h1 {
-      font-size: 3rem;
-      margin: 0 0 10px;
-    }
-
-    .overlay p {
-      margin: 0 0 20px;
-      font-size: 1.2rem;
-    }
-
-    /* Download buttons */
-    .download img {
-      margin: 10px;
-      vertical-align: middle;
-    }
-
+    /* Footer minimal cu linkuri legale */
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
+      text-align:center;
+      color:#666;
+      font-size:14px;
+      padding:18px 10px 28px;
     }
-
-    footer a {
-      color: #666;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a { color:#666; text-decoration:none; margin:0 10px; }
+    footer a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- HERO: imaginea ta, fără overlay/text -->
   <div class="hero">
-    <div class="overlay">
-      <h1>MuscleNerd</h1>
-      <p>by Nerdform Labs</p>
-      <p><em>Advanced analytics for muscle growth</em></p>
-      <div class="download">
-        <!-- iOS badge -->
-        <a href="https://apps.apple.com/app/idXXXXXXXX" target="_blank">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
-               alt="Download on the App Store" style="height:60px;">
-        </a>
-        <!-- Android badge -->
-        <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank">
-          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
-               alt="Get it on Google Play" style="height:80px;">
-        </a>
-      </div>
-    </div>
+    <img src="main.jpg" alt="MuscleNerd by Nerdform Labs">
   </div>
 
-  <!-- Footer -->
+  <!-- DOAR butoanele, sub imagine -->
+  <div class="download">
+    <!-- iOS -->
+    <a href="https://apps.apple.com/app/idXXXXXXXX" target="_blank" rel="noopener">
+      <img
+        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+        alt="Download on the App Store">
+    </a>
+
+    <!-- Android -->
+    <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank" rel="noopener">
+      <img
+        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+        alt="Get it on Google Play">
+    </a>
+  </div>
+
   <footer>
-    <p>© 2025 Nerdform Labs / Tirrelo L.L.C.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="support.html">Support</a>
-    </p>
+    © 2025 Nerdform Labs / Tirrelo L.L.C. ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="support.html">Support</a>
   </footer>
 
 </body>

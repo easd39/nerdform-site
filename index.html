@@ -76,18 +76,17 @@
 <body>
 
   <!-- HERO -->
-  <div class="hero">
-    <img src="main.jpg" alt="MuscleNerd by NerdForm Labs LLC">
-  </div>
-
-  <!-- Android Download -->
-  <div class="download">
-    <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank" rel="noopener">
-      <img
-        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-        alt="Get it on Google Play">
-    </a>
-  </div>
+<div class="hero">
+  <picture>
+    <!-- Mobil (<= 900px) -->
+    <source media="(max-width: 900px)" srcset="main-mobile.jpg?v=2">
+    <!-- Desktop (> 900px) -->
+    <source media="(min-width: 901px)" srcset="main.jpg?v=2">
+    <!-- Fallback -->
+    <img src="main.jpg?v=2" alt="MuscleNerd by NerdForm Labs LLC"
+         style="display:block;width:100%;height:auto;">
+  </picture>
+</div>
 
   <!-- Linkuri simple -->
   <div class="links">

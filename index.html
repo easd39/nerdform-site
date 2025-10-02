@@ -2,43 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>MuscleNerd - by Nerdform Labs</title>
   <style>
-    html, body { margin:0; padding:0; font-family: Arial, sans-serif; background:#fff; }
-
-    /* Imagine principală (hero) */
-    .hero img {
-      display:block;
-      width:100%;
-      height:auto;
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
     }
 
-    /* Buton Android sub imagine */
+    /* Imaginea principală */
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Container pentru buton */
     .download {
-      display:flex;
-      justify-content:center;
-      margin-top:-20px; /* îl ridică mai sus față de default */
+      display: flex;
+      justify-content: center;
+      margin-top: -20px;
       padding-bottom: 20px;
     }
     .download a img {
-      height:70px;
-      display:block;
+      height: 70px;
+      display: block;
+    }
+
+    /* Responsiv pentru mobil */
+    @media (max-width: 768px) {
+      .download {
+        margin-top: -10px;
+      }
+      .download a img {
+        height: 60px;
+      }
     }
 
     @media (max-width: 480px) {
-      .download { margin-top:-10px; }
-      .download a img { height:55px; }
+      .download {
+        margin-top: -5px;
+      }
+      .download a img {
+        height: 50px;
+      }
     }
 
     footer {
-      text-align:center;
-      color:#666;
-      font-size:14px;
-      padding:18px 10px 28px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      padding: 18px 10px 28px;
     }
-    footer a { color:#666; text-decoration:none; margin:0 10px; }
-    footer a:hover { text-decoration:underline; }
+    footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -48,7 +73,7 @@
     <img src="main.jpg" alt="MuscleNerd by Nerdform Labs">
   </div>
 
-  <!-- Doar Android -->
+  <!-- Android Download -->
   <div class="download">
     <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank" rel="noopener">
       <img

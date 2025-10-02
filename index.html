@@ -1,24 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NerdForm Labs — Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuscleNerd - by Nerdform Labs</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+
+    /* Hero section */
+    .hero {
+      background: url("main.jpg") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    /* Dark overlay for better contrast */
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .overlay h1 {
+      font-size: 3rem;
+      margin: 0 0 10px;
+    }
+
+    .overlay p {
+      margin: 0 0 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Download buttons */
+    .download img {
+      margin: 10px;
+      vertical-align: middle;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="font-family:Arial, sans-serif; margin:40px;">
-  <h1>NerdForm Labs (Tirrelo L.L.C.)</h1>
-  <p>We develop the <strong>Muscle Nerd</strong> fitness app, designed to provide intelligent training insights.</p>
+<body>
 
-  <h2>Contact</h2>
-  <p>Email us at: <a href="mailto:support@nerdform.org">support@nerdform.org</a></p>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="overlay">
+      <h1>MuscleNerd</h1>
+      <p>by Nerdform Labs</p>
+      <p><em>Advanced analytics for muscle growth</em></p>
+      <div class="download">
+        <!-- iOS badge -->
+        <a href="https://apps.apple.com/app/idXXXXXXXX" target="_blank">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+               alt="Download on the App Store" style="height:60px;">
+        </a>
+        <!-- Android badge -->
+        <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
+               alt="Get it on Google Play" style="height:80px;">
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="support.html">Support</a></li>
-  </ul>
-  
-  <hr>
-  <p><small>© 2025 NerdForm Labs / Tirrelo L.L.C.</small></p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nerdform Labs / Tirrelo L.L.C.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="support.html">Support</a>
+    </p>
+  </footer>
+
 </body>
 </html>

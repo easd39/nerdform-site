@@ -5,36 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MuscleNerd - by Nerdform Labs</title>
   <style>
-    /* Reset & base */
     html, body { margin:0; padding:0; font-family: Arial, sans-serif; background:#fff; }
 
-    /* 1) Hero = DOAR imaginea ta */
+    /* Imagine principală (hero) */
     .hero img {
       display:block;
       width:100%;
-      height:auto;   /* păstrează proporțiile */
+      height:auto;
     }
 
-    /* 2) Secțiunea cu butoanele de download, imediat sub imagine */
+    /* Buton Android sub imagine */
     .download {
       display:flex;
       justify-content:center;
-      align-items:center;
-      gap:18px;
-      padding:28px 16px 18px; /* spațiu față de imagine */
+      margin-top:-20px; /* îl ridică mai sus față de default */
+      padding-bottom: 20px;
     }
     .download a img {
-      height:64px;           /* mărime confortabilă desktop */
+      height:70px;
       display:block;
     }
 
-    /* Mobile tweaks */
     @media (max-width: 480px) {
-      .download { gap:12px; padding:20px 12px 14px; }
-      .download a img { height:52px; }  /* puțin mai mic pe telefon */
+      .download { margin-top:-10px; }
+      .download a img { height:55px; }
     }
 
-    /* Footer minimal cu linkuri legale */
     footer {
       text-align:center;
       color:#666;
@@ -47,21 +43,13 @@
 </head>
 <body>
 
-  <!-- HERO: imaginea ta, fără overlay/text -->
+  <!-- HERO -->
   <div class="hero">
     <img src="main.jpg" alt="MuscleNerd by Nerdform Labs">
   </div>
 
-  <!-- DOAR butoanele, sub imagine -->
+  <!-- Doar Android -->
   <div class="download">
-    <!-- iOS -->
-    <a href="https://apps.apple.com/app/idXXXXXXXX" target="_blank" rel="noopener">
-      <img
-        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-        alt="Download on the App Store">
-    </a>
-
-    <!-- Android -->
     <a href="https://play.google.com/store/apps/details?id=com.musclenerd.app" target="_blank" rel="noopener">
       <img
         src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"

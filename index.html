@@ -13,7 +13,6 @@
       color: #111;
     }
 
-    /* Container pentru imagine + buton */
     .hero {
       position: relative;
       width: 100%;
@@ -27,16 +26,15 @@
     /* Buton Google Play suprapus */
     .download {
       position: absolute;
-      bottom: 20px; /* distanță față de marginea de jos a imaginii */
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
     }
     .download a img {
-      height: 70px;
+      height: 85px; /* mai mare pe desktop */
       display: block;
     }
 
-    /* Linkuri minimaliste în footer */
     .links {
       display: flex;
       justify-content: center;
@@ -63,12 +61,12 @@
     }
 
     @media (max-width: 768px) {
-      .download a img { height: 60px; }
+      .download a img { height: 70px; }
       .links { font-size: 14px; gap: 16px; }
     }
 
     @media (max-width: 480px) {
-      .download a img { height: 50px; }
+      .download a img { height: 60px; }
       .links { font-size: 13px; gap: 12px; }
     }
   </style>
@@ -92,7 +90,7 @@
     </div>
   </div>
 
-  <!-- Linkuri în footer -->
+  <!-- Linkuri -->
   <div class="links">
     <a href="support.html">Support</a>
     <a href="privacy.html">Privacy Policy</a>

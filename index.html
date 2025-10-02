@@ -8,8 +8,9 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #fff;
+      color: #111;
     }
 
     /* Imaginea principală */
@@ -19,11 +20,11 @@
       height: auto;
     }
 
-    /* Container pentru buton */
+    /* Buton Google Play */
     .download {
       display: flex;
       justify-content: center;
-      margin-top: -40px; /* ridicat mai mult spre imagine */
+      margin-top: -40px;
       padding-bottom: 10px;
     }
     .download a img {
@@ -31,38 +32,46 @@
       display: block;
     }
 
-    /* Responsiv pentru mobil */
-    @media (max-width: 768px) {
-      .download {
-        margin-top: -25px;
-      }
-      .download a img {
-        height: 60px;
-      }
+    /* Butoane Contact / Privacy / Terms */
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
     }
-
-    @media (max-width: 480px) {
-      .download {
-        margin-top: -15px;
-      }
-      .download a img {
-        height: 50px;
-      }
+    .links a {
+      padding: 10px 20px;
+      background: #f2f2f2;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 15px;
+      color: #111;
+      font-weight: 500;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .links a:hover {
+      background: #e5e5e5;
+      transform: translateY(-1px);
     }
 
     footer {
       text-align: center;
       color: #666;
       font-size: 14px;
-      padding: 18px 10px 28px;
+      padding: 20px 10px 30px;
+      margin-top: 30px;
     }
-    footer a {
-      color: #666;
-      text-decoration: none;
-      margin: 0 10px;
+
+    @media (max-width: 768px) {
+      .download { margin-top: -25px; }
+      .download a img { height: 60px; }
+      .links a { font-size: 14px; padding: 9px 18px; }
     }
-    footer a:hover {
-      text-decoration: underline;
+    @media (max-width: 480px) {
+      .download { margin-top: -15px; }
+      .download a img { height: 50px; }
+      .links a { font-size: 13px; padding: 8px 16px; }
     }
   </style>
 </head>
@@ -70,7 +79,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img src="main.jpg" alt="MuscleNerd by Nerdform Labs LLC">
+    <img src="main.jpg" alt="MuscleNerd by NerdForm Labs LLC">
   </div>
 
   <!-- Android Download -->
@@ -82,10 +91,16 @@
     </a>
   </div>
 
+  <!-- Contact + Privacy + Terms -->
+  <div class="links">
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    © 2025 NerdForm Labs LLC ·
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="support.html">Support</a>
+    © 2025 NerdForm Labs LLC
   </footer>
 
 </body>

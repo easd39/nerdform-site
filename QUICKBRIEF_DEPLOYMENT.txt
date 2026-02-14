@@ -1,0 +1,37 @@
+⚡ QUICK DEPLOYMENT - QuickBrief Privacy & Data Deletion
+================================================================
+
+✅ CE AM FĂCUT:
+- Actualizat: quickbrief/privacy.html
+- Adăugat NOU: quickbrief/data-deletion.html
+- Adăugat: quickbrief/README.md
+
+📍 URL-URILE TALE:
+După push pe GitHub:
+- Privacy: https://nerdform.org/quickbrief/privacy.html
+- Deletion: https://nerdform.org/quickbrief/data-deletion.html
+
+🚀 DEPLOYMENT (30 secunde):
+
+cd nerdform-site
+git add .
+git commit -m "Update QuickBrief privacy policy and add data deletion"
+git push origin main
+
+⏱️ Așteaptă 1-2 minute pentru GitHub Pages să se actualizeze.
+
+📝 CONFIGURARE FACEBOOK (2 minute):
+
+1. https://developers.facebook.com/apps/2129227787844417
+2. App Settings → Basic
+3. Privacy Policy URL:
+   https://nerdform.org/quickbrief/privacy.html
+4. User Data Deletion → Data Deletion Instructions URL:
+   https://nerdform.org/quickbrief/data-deletion.html
+5. Save Changes
+6. Toggle "App Mode" → Switch to "Live"
+
+✅ DONE! Facebook Login e LIVE!
+
+================================================================
+Pentru detalii complete: quickbrief/README.md

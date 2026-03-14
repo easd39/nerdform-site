@@ -55,6 +55,13 @@
             margin: 20px 0;
             border-radius: 4px;
         }
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #007AFF;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
         .contact-box {
             background: #007AFF;
             color: white;
@@ -96,25 +103,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>QuickBrief - Data Deletion Instructions</h1>
+        <h1>QuickBrief — Data Deletion Instructions</h1>
 
         <p>
-            At QuickBrief, we respect your right to control your personal data. You can request deletion of your 
-            account and all associated data at any time using one of the methods below.
+            At QuickBrief, we respect your right to control your personal data. This page explains 
+            how your data is managed and how you can request its deletion at any time.
         </p>
 
-        <h2>How to Delete Your Data</h2>
+        <div class="info-box">
+            <strong>ℹ️ Automatic Deletion:</strong> Most of your data is deleted automatically. 
+            Study sessions — including summaries, flashcards, and any submitted text or images — 
+            are stored for <strong>7 days</strong> and then permanently deleted. You can also 
+            extend individual sessions by 7 days or delete them manually at any time from the app.
+        </div>
+
+        <h2>How to Delete Your Account & All Data</h2>
 
         <div class="method-box">
             <h3>Method 1: In-App Deletion (Recommended)</h3>
             <ol class="steps">
                 <li>Open the QuickBrief app</li>
                 <li>Go to <strong>Settings</strong></li>
-                <li>Scroll down to <strong>Account</strong></li>
-                <li>Tap <strong>"Delete Account"</strong></li>
+                <li>Scroll down and tap <strong>"Delete Account"</strong></li>
                 <li>Confirm your request</li>
             </ol>
-            <p><em>Your account and all data will be deleted immediately.</em></p>
+            <p><em>Your account and all associated data will be permanently deleted immediately.</em></p>
         </div>
 
         <div class="method-box">
@@ -128,7 +141,7 @@
             <p><em>We will process your request within 30 days.</em></p>
         </div>
 
-        <h2>What Data Will Be Deleted?</h2>
+        <h2>What Data Is Collected & Deleted</h2>
 
         <table>
             <thead>
@@ -139,24 +152,28 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Account Information (email, name)</td>
-                    <td>Immediate (or within 30 days if requested via email)</td>
+                    <td>Account information (email, sign-in provider)</td>
+                    <td>Immediately upon account deletion</td>
                 </tr>
                 <tr>
-                    <td>User-Submitted Content (texts, images)</td>
-                    <td>Immediate (or within 30 days if requested via email)</td>
+                    <td>Submitted text content</td>
+                    <td>Auto-deleted after 7 days, or immediately upon account deletion</td>
                 </tr>
                 <tr>
-                    <td>Generated Summaries</td>
-                    <td>Immediate (or within 30 days if requested via email)</td>
+                    <td>Submitted images (used for text recognition)</td>
+                    <td>Auto-deleted after 7 days, or immediately upon account deletion</td>
                 </tr>
                 <tr>
-                    <td>Usage Data (analytics)</td>
-                    <td>Immediate (or within 30 days if requested via email)</td>
+                    <td>Generated summaries & flashcards</td>
+                    <td>Auto-deleted after 7 days, or immediately upon account deletion</td>
                 </tr>
                 <tr>
-                    <td>Subscription Information</td>
-                    <td>Immediate (managed by RevenueCat and Apple)</td>
+                    <td>Usage statistics (scan & grade counts)</td>
+                    <td>Immediately upon account deletion</td>
+                </tr>
+                <tr>
+                    <td>Subscription information</td>
+                    <td>Managed by RevenueCat, Apple, and Google Play — subject to their policies</td>
                 </tr>
             </tbody>
         </table>
@@ -165,28 +182,29 @@
             <strong>⚠️ Important Notes:</strong>
             <ul>
                 <li>Account deletion is <strong>permanent and irreversible</strong></li>
-                <li>All your summaries, settings, and preferences will be lost</li>
-                <li>Active subscriptions will be canceled (no refunds for unused time)</li>
-                <li>Some data may be retained for legal compliance (e.g., tax records) but will not be used for any other purpose</li>
+                <li>All study sessions, flashcards, and history will be permanently lost</li>
+                <li>Deleting your account does not automatically cancel an active subscription — manage subscriptions through the App Store or Google Play</li>
+                <li>Some anonymized, non-identifiable usage data may be retained for service improvement</li>
+                <li>Legal and financial records are retained as required by applicable law</li>
             </ul>
         </div>
 
-        <h2>Data Retention After Deletion</h2>
+        <h2>Managing Individual Study Sessions</h2>
         <p>
-            After you delete your account:
+            You can delete or manage individual study sessions without deleting your account:
         </p>
         <ul>
-            <li>Personal data is immediately removed from active systems</li>
-            <li>Backup copies are purged within 90 days</li>
-            <li>Some anonymized usage statistics may be retained for service improvement</li>
-            <li>Legal/financial records are retained as required by law (minimum 7 years for tax purposes)</li>
+            <li>Open the <strong>History</strong> tab in the app</li>
+            <li>Swipe left on any session to delete it immediately</li>
+            <li>Tap <strong>+7 days</strong> to extend a session's retention period</li>
+            <li>All sessions expire and are deleted automatically after 7 days</li>
         </ul>
 
         <h2>Need Help?</h2>
         <div class="contact-box">
             <p>If you have questions about data deletion or need assistance:</p>
             <p><a href="mailto:contact@nerdform.org">contact@nerdform.org</a></p>
-            <p>We typically respond within 24-48 hours</p>
+            <p>We typically respond within 24–48 hours</p>
         </div>
 
         <div class="footer">
